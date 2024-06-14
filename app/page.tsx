@@ -1,12 +1,12 @@
 import dynamic from "next/dynamic";
 import Grid from "@/components/custom/Grid";
 import Hero from "@/components/custom/Hero";
-const RecentProjects = dynamic(()=> import('@/components/custom/RecentProjects'))
-const FloatingNav  = dynamic(()=> import('@/components/ui/FloatingNav'))
-const ApproachUs  = dynamic(()=> import('@/components/custom/ApproachUs'))
-const Clients  = dynamic(()=> import('@/components/custom/Clients'))
-const Experience  = dynamic(()=> import('@/components/custom/Experience'))
-const Footer  = dynamic(()=> import('@/components/custom/Footer'))
+const RecentProjects = dynamic(() => import('@/components/custom/RecentProjects'))
+const FloatingNav = dynamic(() => import('@/components/ui/FloatingNav'))
+const ApproachUs = dynamic(() => import('@/components/custom/ApproachUs'))
+const Clients = dynamic(() => import('@/components/custom/Clients'))
+const Experience = dynamic(() => import('@/components/custom/Experience'))
+const Footer = dynamic(() => import('@/components/custom/Footer'))
 import { navItems } from "@/data";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
         <Clients />
         <Experience />
         <ApproachUs />
-        <Footer/>
+        <Footer />
       </div>
     </main>
   );
