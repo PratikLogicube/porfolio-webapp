@@ -3,20 +3,19 @@ import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import Image from "next/image";
 
 const ApproachUs = () => {
   return (
     <section className="w-full py-20 ">
-      <h1 className="heading">
-        My <span className="text-purple">Approach</span>
+      <h1 className="heading !text-[4rem]">
+        How <span className="text-[#006400]">To Buy?</span>
       </h1>
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
-          title="Planning and Strategy"
-          icon={<AceternityIcon order="phase 1" />}
-          description="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          title="Create a Wallet"
+          icon={<AceternityIcon icon="/raydium.png" />}
+          description="Download raydium from the app store or google play store for free."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -24,33 +23,26 @@ const ApproachUs = () => {
           />
         </Card>
         <Card
-          title="Nisha is Munni"
-          icon={<AceternityIcon order="phase 2" />}
-          description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
+          title="Get Some SOL"
+          icon={<AceternityIcon icon="/sol.png" />}
+          description="Have SOL in your wallet to switch to PPV. If you don’t have any SOL, you can buy directly on Raydium, transfer from another wallet, or buy on another exchange and send it to your wallet."
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-black"
-            colors={[
-              [236, 72, 153],
-              [232, 121, 249],
-            ]}
+            containerClassName="bg-emerald-900"
             dotSize={2}
           />
           {/* Radial gradient for the cute fade
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Munni is Aditi"
-          icon={<AceternityIcon order="phase 3" />}
-          description="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          title="Switch SOL for PPV"
+          icon={<AceternityIcon icon="/swap.png" />}
+          description="switch SOL for PPV. We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility."
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-sky-600"
-            colors={[[125, 211, 252]]}
+            containerClassName="bg-emerald-900"
           />
         </Card>
       </div>
@@ -99,8 +91,8 @@ const Card = ({
         </div>
         <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
           {title}
-              </h2>
-              <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{color: '#e4ecff'}}>
+        </h2>
+        <h2 className="dark:text-white text-lg opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{ color: '#e4ecff' }}>
           {description}
         </h2>
       </div>
@@ -110,14 +102,18 @@ const Card = ({
 
 export default ApproachUs;
 
-const AceternityIcon = ({ order }: { order: string }) => {
+const AceternityIcon = ({ order, icon }: { order?: string, icon: string }) => {
   return (
     <div>
-      <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+      <button className="relative inline-flex h-60  overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 font-bold text-white backdrop-blur-3xl text-2xl px-5 py-2 capitalize">
+        <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 font-bold text-white backdrop-blur-3xl text-2xl p-3 capitalize">
+          <div className="relative w-40 h-40">
+            <Image alt="icon" src={icon} fill />
+          </div>
           {order}
-        </span>
+        </div>
       </button>
     </div>
   );

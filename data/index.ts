@@ -204,14 +204,23 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/telegram.svg",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/twitter.svg",
+  },
+];
+
+export const exchangePlatforms = [
+  {
+    id: 1,
+    name: "Raydium",
+    img: "/raydium.png",
   },
   {
-    id: 3,
-    img: "/link.svg",
+    id: 2,
+    name: "Dex Screener",
+    img: "/dex.png",
   },
 ];

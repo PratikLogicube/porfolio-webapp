@@ -4,9 +4,10 @@ import { cn } from "@/utils/cn";
 type SpotlightProps = {
   className?: string;
   fill?: string;
+  spotlightClassname?: string;
 };
 
-export const Spotlight = ({ className, fill }: SpotlightProps) => {
+export const Spotlight = ({ className, spotlightClassname, fill }: SpotlightProps) => {
   return (
     <svg
       className={cn(
@@ -17,7 +18,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
       viewBox="0 0 3787 2842"
       fill="none"
     >
-      <g filter="url(#filter)">
+      <g filter="url(#filter)" className={cn("", spotlightClassname)}>
         <ellipse
           cx="1924.71"
           cy="273.501"
