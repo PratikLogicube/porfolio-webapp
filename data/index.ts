@@ -215,8 +215,8 @@ export const socialMedia = [
 export const exchangePlatforms = [
   {
     id: 1,
-    name: "Raydium",
-    img: "/raydium.png",
+    name: "Phantom",
+    img: "/phantomLogo.png",
   },
   {
     id: 2,

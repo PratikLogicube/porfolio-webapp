@@ -14,8 +14,8 @@ const ApproachUs = () => {
       <div className="py-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
           title="Create a Wallet"
-          icon={<AceternityIcon icon="/raydium.png" />}
-          description="Download raydium from the app store or google play store for free."
+          icon={<AceternityIcon icon="/phantomLogo.png" />}
+          description="Download phantom wallet from the app store or google play store for free."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -25,7 +25,7 @@ const ApproachUs = () => {
         <Card
           title="Get Some SOL"
           icon={<AceternityIcon icon="/sol.png" />}
-          description="Have SOL in your wallet to switch to PPV. If you don’t have any SOL, you can buy directly on Raydium, transfer from another wallet, or buy on another exchange and send it to your wallet."
+          description="Have SOL in your wallet to switch to PPM. If you don’t have any SOL, you can buy directly on phantom wallet, transfer from another wallet, or buy on another exchange and send it to your wallet."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -36,9 +36,9 @@ const ApproachUs = () => {
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Switch SOL for PPV"
-          icon={<AceternityIcon icon="/swap.png" />}
-          description="switch SOL for PPV. We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility."
+          title="Switch SOL for PPM"
+          icon={<AceternityIcon icon="/swapImg.png" />}
+          description="switch SOL for PPM. We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -86,7 +86,7 @@ const Card = ({
       </AnimatePresence>
 
       <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover/canvas-card:opacity-0 transition duration-200 w-16  mx-auto flex items-center justify-center">
           {icon}
         </div>
         <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
@@ -107,9 +107,9 @@ const AceternityIcon = ({ order, icon }: { order?: string, icon: string }) => {
     <div>
       <button className="relative inline-flex h-60  overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
 
-        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-        <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 font-bold text-white backdrop-blur-3xl text-2xl p-3 capitalize">
-          <div className="relative w-40 h-40">
+        {/* <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" /> */}
+        <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full font-bold text-white backdrop-blur-3xl text-2xl p-3 capitalize">
+          <div className="relative w-20 h-20">
             <Image alt="icon" src={icon} fill />
           </div>
           {order}

@@ -28,7 +28,7 @@ const CopyToClipboardButton = ({ content }: Props) => {
 
         <div className="w-full max-w-sm">
             <div className="flex items-center">
-                <span className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg dark:bg-white dark:text-[#006400] dark:border-gray-600">URL</span>
+                <span className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg dark:bg-white dark:text-[#006400] dark:border-gray-600">C/A</span>
                 <div className="relative w-full">
                     <input id="website-url" type="text" aria-describedby="helper-text-explanation" className="bg-gray-50 border border-e-0 border-gray-300 text-gray-[#006400] dark:text-gray-400 text-sm border-s-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-[#01796F] dark:placeholder-[#006400]" value={content} readOnly disabled />
                 </div>

@@ -8,12 +8,12 @@ const Clients = dynamic(() => import('@/components/custom/Clients'))
 const Experience = dynamic(() => import('@/components/custom/Experience'))
 const Footer = dynamic(() => import('@/components/custom/Footer'))
 import { navItems } from "@/data";
-import { Navbar } from "@/components/custom/Navbar";
+import Navbar from "@/components/custom/Navbar";
 
 export default function Home() {
   return (
-    <main className="relative flex justify-center flex-col mx-auto sm:px-10 px-5 ">
-      <div className="max-w-7xl w-full m-auto">
+    <main className="relative flex justify-center flex-col mx-auto ">
+      <div className="max-w-7xl w-full m-auto lg:px-10">
         <Navbar />
         <Hero />
         {/* <Grid /> */}
