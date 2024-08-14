@@ -205,18 +205,20 @@ export const socialMedia = [
   {
     id: 1,
     img: "/telegram.svg",
+    href: "https://t.me/peperamacoin",
   },
   {
     id: 2,
     img: "/twitter.svg",
+    href: "https://x.com/peperamacoin?t=2begI4urn8Phs1GKd39JBA&s=09",
   },
 ];
 
 export const exchangePlatforms = [
   {
     id: 1,
-    name: "Phantom",
-    img: "/phantomLogo.png",
+    name: "Raydium",
+    img: "/raydium.png",
   },
   {
     id: 2,

@@ -4,14 +4,15 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import Image from "next/image";
+import { cn } from "@/utils/cn";
 
 const ApproachUs = () => {
   return (
     <section className="w-full py-20 ">
-      <h1 className="heading !text-[4rem]">
+      <h1 className="heading">
         How <span className="text-[#006400]">To Buy?</span>
       </h1>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center gap-4">
+      <div className="py-10 flex flex-col lg:flex-row items-center justify-center gap-10">
         <Card
           title="Create a Wallet"
           icon={<AceternityIcon icon="/phantomLogo.png" />}
@@ -37,7 +38,7 @@ const ApproachUs = () => {
         </Card>
         <Card
           title="Switch SOL for PPM"
-          icon={<AceternityIcon icon="/swapImg.png" />}
+          icon={<AceternityIcon icon="/swap.png" className="w-40 h-20" />}
           description="switch SOL for PPM. We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility."
         >
           <CanvasRevealEffect
@@ -66,7 +67,7 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] lg:w-[35rem] rounded-3xl"
+      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[24rem] md:h-[30rem] lg:w-[35rem] rounded-3xl"
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
@@ -86,7 +87,7 @@ const Card = ({
       </AnimatePresence>
 
       <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover/canvas-card:opacity-0 transition duration-200 w-16  mx-auto flex items-center justify-center">
+        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover/canvas-card:opacity-0 transition duration-200 w-auto  mx-auto flex items-center justify-center">
           {icon}
         </div>
         <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
@@ -102,14 +103,14 @@ const Card = ({
 
 export default ApproachUs;
 
-const AceternityIcon = ({ order, icon }: { order?: string, icon: string }) => {
+const AceternityIcon = ({ order, icon, className }: { order?: string, icon: string, className?: string }) => {
   return (
     <div>
       <button className="relative inline-flex h-60  overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
 
         {/* <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" /> */}
         <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full font-bold text-white backdrop-blur-3xl text-2xl p-3 capitalize">
-          <div className="relative w-20 h-20">
+          <div className={cn("relative w-20 h-20", className)}>
             <Image alt="icon" src={icon} fill />
           </div>
           {order}

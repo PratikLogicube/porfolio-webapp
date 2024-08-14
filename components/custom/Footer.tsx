@@ -2,13 +2,14 @@ import React from "react";
 import MagicButton from "../ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
+import Link from "next/link";
 
 type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="w-full pb-10 mb-[100px] md:mb-5" id="contact">
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+    <footer className="w-full " id="contact">
+      <div className="w-full absolute left-0 -bottom-40 min-h-80">
         <img
           src="/footer-grid.svg"
           alt=""
@@ -21,7 +22,8 @@ const Footer = (props: Props) => {
           profits to the next level?
         </h1>
         <p className="text-white-200 text-lg md:mt-10 my-5 text-center">
-          Buy out <span className="text-3xl text-[#21e065]">PepeRama</span> today and let&apos;s have fun together!
+          Buy out <span className="text-3xl text-[#21e065]">PepeRama</span>{" "}
+          today and let&apos;s have fun together!
         </p>
         <a href="mailto:pratiknavlani7572@gmail.com">
           <MagicButton
@@ -42,7 +44,14 @@ const Footer = (props: Props) => {
               key={profile.id}
               className="w-20 h-20 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={profile.img} alt={profile.img} width={48} height={48} />
+              <Link href={profile.href} target="_blank">
+                <img
+                  src={profile.img}
+                  alt={profile.img}
+                  width={48}
+                  height={48}
+                />
+              </Link>
             </div>
           ))}
         </div>
